@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_spaced.mk
+    $(LOCAL_DIR)/aosp_spaced.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_spaced-user \
-    arrow_spaced-userdebug \
-    arrow_spaced-eng
+    aosp_spaced-user \
+    aosp_spaced-userdebug \
+    aosp_spaced-eng
