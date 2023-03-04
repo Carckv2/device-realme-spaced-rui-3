@@ -21,8 +21,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile
 $(call inherit-product, device/realme/spaced/device.mk)
 
-# Inherit some common ArrowOS stuff.
-$(call inherit-product, vendor/aosp/config/common.mk)
+# Inherit some common AOSP stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Arrow build configuration
 TARGET_BOOT_ANIMATION_RES := 1080
