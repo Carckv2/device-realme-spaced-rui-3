@@ -22,18 +22,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/realme/spaced/device.mk)
 
 # Inherit some common ArrowOS stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
+$(call inherit-product, vendor/aosp/config/common.mk)
 
 # Arrow build configuration
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_USES_FACE_UNLOCK := true
-ARROW_GAPPS := true
+WITH_GAPPS := true
+PEX_IS_PHONE := true
+TARGET_SUPPORT_QUICK_TAP := true
+BUILD_TYPE := UNOFFICIAL
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := arrow_spaced
+PRODUCT_NAME := aosp_spaced
 PRODUCT_DEVICE := spaced
 PRODUCT_BRAND := realme
-PRODUCT_MODEL := Realme 8i
+PRODUCT_MODEL := Realme 8i/ Narzo 50 4G
 PRODUCT_MANUFACTURER := realme
 
 # Build info
@@ -44,3 +47,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="sys_oplus_mssi_64_cn-user-11-RP1A.200720.011-mp8tc16sppr10V1-release-keys"
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
+# AOSP Device Maintainers
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DEVICE_MAINTAINERS="NINJA"
+
